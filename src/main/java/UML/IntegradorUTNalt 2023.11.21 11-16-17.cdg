@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="IntegradorUTNalt">
+  <ClassDiagramComponents>
+    <Class name="Conexion" package="data" visibility="public" xPosition="252.0" yPosition="1138.0">
+      <Fields>
+        <Field name="URL" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="DB" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="USUARIO" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="con" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getConexion" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="entidad" visibility="public" xPosition="6.0" yPosition="190.0">
+      <Fields>
+        <Field name="idCliente" type="int" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+        <Field name="razonSocial" type="String" visibility="private"/>
+        <Field name="cuit" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="ProductosContratados" type="Set&lt;Producto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="activo"/>
+          <Argument type="String" name="razonSocial"/>
+          <Argument type="String" name="cuit"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="idCliente"/>
+          <Argument type="boolean" name="activo"/>
+          <Argument type="String" name="razonSocial"/>
+          <Argument type="String" name="cuit"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="Set&lt;Producto&gt;" name="ProductosContratados"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarServicioContratado" returnType="void" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="modificarDatosContacto" returnType="void" visibility="public">
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="obtenerServiciosContratados" returnType="Set&lt;Producto&gt;" visibility="public"/>
+        <Method name="generarReporteIncidentes" returnType="String" visibility="public"/>
+        <Method name="eliminarServicioContratado" returnType="void" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="ModificaDatos" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Incidente" package="entidad" visibility="public" xPosition="482.0" yPosition="200.0">
+      <Fields>
+        <Field name="idIncidente" type="int" visibility="private"/>
+        <Field name="fechaAlta" type="Date" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="producto" type="Producto" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="tecnicoAsignado" type="Tecnico" visibility="private"/>
+        <Field name="dificultadExtra" type="boolean" visibility="private"/>
+        <Field name="cantHsEstimadas" type="int" visibility="private"/>
+        <Field name="informeTecnico" type="String" visibility="private"/>
+        <Field name="fechaBaja" type="Date" visibility="private"/>
+        <Field name="estado" type="Estado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Date" name="fechaAlta"/>
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Producto" name="producto"/>
+          <Argument type="String" name="tipo"/>
+          <Argument type="Tecnico" name="tecnicoAsignado"/>
+          <Argument type="boolean" name="dificultadExtra"/>
+          <Argument type="int" name="cantHsEstimadas"/>
+          <Argument type="String" name="informeTecnico"/>
+          <Argument type="Date" name="fechaBaja"/>
+          <Argument type="Estado" name="estado"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="idIncidente"/>
+          <Argument type="Date" name="fechaAlta"/>
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Producto" name="producto"/>
+          <Argument type="String" name="tipo"/>
+          <Argument type="Tecnico" name="tecnicoAsignado"/>
+          <Argument type="boolean" name="dificultadExtra"/>
+          <Argument type="int" name="cantHsEstimadas"/>
+          <Argument type="String" name="informeTecnico"/>
+          <Argument type="Date" name="fechaBaja"/>
+          <Argument type="Estado" name="estado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="asignarTecnico" returnType="void" visibility="public">
+          <Argument type="Tecnico" name="tecnico"/>
+        </Method>
+        <Method name="marcarComoResuelto" returnType="void" visibility="public">
+          <Argument type="String" name="consideraciones"/>
+        </Method>
+        <Method name="calcularTiempoEstimado" returnType="int" visibility="public"/>
+        <Method name="generarNotificacionCliente" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tecnico" package="entidad" visibility="public" xPosition="802.0" yPosition="114.0">
+      <Fields>
+        <Field name="Legajo" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="telNotificaPreferencia" type="boolean" visibility="private"/>
+        <Field name="expertise" type="Set&lt;Especialidad&gt;" visibility="private"/>
+        <Field name="incidentesAsignados" type="List&lt;Incidente&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="boolean" name="telNotificaPreferencia"/>
+          <Argument type="Incidente" name="incidente"/>
+          <Argument type="Set&lt;Especialidad&gt;" name="expertise"/>
+          <Argument type="List&lt;Incidente&gt;" name="insidentesAsignados"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="Legajo"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="boolean" name="telNotificaPreferencia"/>
+          <Argument type="Incidente" name="incidente"/>
+          <Argument type="Set&lt;Especialidad&gt;" name="expertise"/>
+          <Argument type="List&lt;Incidente&gt;" name="insidentesAsignados"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarEspecialidad" returnType="void" visibility="public">
+          <Argument type="Especialidad" name="especialidad"/>
+        </Method>
+        <Method name="marcarIncidenteComoResuelto" returnType="void" visibility="public">
+          <Argument type="Incidente" name="incidente"/>
+          <Argument type="String" name="consideraciones"/>
+        </Method>
+        <Method name="obtenerIncidentesPendientes" returnType="List&lt;Incidente&gt;" visibility="public"/>
+        <Method name="establecerMedioComunicacion" returnType="void" visibility="public">
+          <Argument type="String" name="medio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="IntegradorUTNalt" package="main" visibility="public" xPosition="46.0" yPosition="988.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Especialidad" package="entidad" visibility="public" xPosition="711.0" yPosition="521.0">
+      <Literals>
+        <Literal name="BASE_DE_DATOS"/>
+        <Literal name="CONEXION"/>
+        <Literal name="INSTALACION"/>
+        <Literal name="LINUX_UBUNTU"/>
+        <Literal name="MACOS"/>
+        <Literal name="REDES"/>
+        <Literal name="SAP"/>
+        <Literal name="SEGURIDAD"/>
+        <Literal name="TANGO"/>
+        <Literal name="WINDOWS"/>
+      </Literals>
+    </Enum>
+    <Enum name="Estado" package="entidad" visibility="public" xPosition="252.0" yPosition="562.0">
+      <Literals>
+        <Literal name="INGRESADO"/>
+        <Literal name="EN_PROCESO"/>
+        <Literal name="FINALIZADO"/>
+      </Literals>
+    </Enum>
+    <Enum name="Producto" package="entidad" visibility="public" xPosition="274.0" yPosition="116.0">
+      <Literals>
+        <Literal name="LINUX_UBUNTU"/>
+        <Literal name="MACOS"/>
+        <Literal name="SAP"/>
+        <Literal name="TANGO"/>
+        <Literal name="WINDOWS"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tecnicoAsignado" source="entidad.Incidente" target="entidad.Tecnico" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ProductosContratados" source="entidad.Cliente" target="entidad.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;Producto&gt;"/>
+    <HasRelation name="producto" source="entidad.Incidente" target="entidad.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="entidad.Incidente" target="entidad.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="incidentesAsignados" source="entidad.Tecnico" target="entidad.Incidente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Incidente&gt;"/>
+    <HasRelation name="expertise" source="entidad.Tecnico" target="entidad.Especialidad" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;Especialidad&gt;"/>
+    <HasRelation name="estado" source="entidad.Incidente" target="entidad.Estado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

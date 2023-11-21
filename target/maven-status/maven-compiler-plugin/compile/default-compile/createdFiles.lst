@@ -1,0 +1,11 @@
+entidad\Producto.class
+data\Conexion.class
+entidad\Cliente.class
+vista\Escritorio.class
+entidad\Incidente.class
+entidad\Tecnico.class
+vista\Escritorio$1.class
+main\IntegradorUTNalt.class
+data\ClienteData.class
+entidad\Estado.class
+entidad\Especialidad.class
