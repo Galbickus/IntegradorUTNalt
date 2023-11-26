@@ -16,3 +16,11 @@ Los integrantes del grupo 7
 
 ![integrantes grupo 7](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/454da7d0-ccdc-4f1f-a2e5-70837669942a)
 
+La consigna del trabajo. 
+
+[JAVA - Consigna Trabajo Práctico Integrador_.pdf](https://github.com/Galbickus/IntegradorUTNalt/files/13465946/JAVA.-.Consigna.Trabajo.Practico.Integrador_.pdf)
+
+Nueva estructura segun requerimiento Estructura 
+
+![UMLState](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/be6d1954-f709-451f-a942-6e6262c869fc)
+
