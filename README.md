@@ -20,7 +20,11 @@ La consigna del trabajo.
 
 [JAVA - Consigna Trabajo Práctico Integrador_.pdf](https://github.com/Galbickus/IntegradorUTNalt/files/13465946/JAVA.-.Consigna.Trabajo.Practico.Integrador_.pdf)
 
-Nueva estructura segun requerimiento Estructura 
+Nueva estructura segun requerimiento  
 
 ![UMLState](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/be6d1954-f709-451f-a942-6e6262c869fc)
+
+Vista de diseñador Nueva Base de datos:
+![Vista de Diseñador BD Mejorada](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/c7b69d28-29d0-45d7-b0cc-be9c820d3ce0)
+
 
