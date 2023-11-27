@@ -8,12 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import lombok.Data;
+import javax.persistence.*;
 
 /**
  *
  * @author ASUS
  */
 @Data
+@Entity
+@Table(name="tecnico")
 public class Tecnico {
     private int Legajo; // en realidad es el ID
     private String nombre;

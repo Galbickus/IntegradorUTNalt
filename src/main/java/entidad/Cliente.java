@@ -6,12 +6,15 @@ package entidad;
 
 import java.util.Set;
 import lombok.Data;
+import javax.persistence.*;
 
 /**
  *
  * @author ASUS
  */
 @Data
+@Entity
+@Table(name="cliente")
 public class Cliente {
 
     private int idCliente;

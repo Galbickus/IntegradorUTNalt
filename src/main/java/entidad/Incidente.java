@@ -6,12 +6,15 @@ package entidad;
 
 import java.util.Date;
 import lombok.Data;
+import javax.persistence.*;
 
 /**
  *
  * @author ASUS
  */
 @Data
+@Entity
+@Table(name="incidente")
 public class Incidente {
 
     private int idIncidente;
