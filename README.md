@@ -1,8 +1,13 @@
 # IntegradorUTNalt
+
 Proyecto
 El proyecto será desarrollado con patrón MVC (Modelo-Vista-Controlador), con el objetivo que la aplicación sea escalable, mantenible y fácil de expandir.
 
 Utilizando Maven según consigna para poder añadir dependencias como Lombok,  lo que proporcional legibilidad de código y limpieza de clases. 
+
+
+![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/99347fd4-018a-44c6-9421-b9d7f8d3324e)
+
 
 El diagrama de clases
 
