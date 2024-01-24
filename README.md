@@ -5,10 +5,6 @@ El proyecto será desarrollado con patrón MVC (Modelo-Vista-Controlador), con e
 
 Utilizando Maven según consigna para poder añadir dependencias como Lombok,  lo que proporcional legibilidad de código y limpieza de clases. 
 
-![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/ea8f5335-3dc2-426f-b3a8-d6d3d47e4588)
-
-![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/f400f141-4d3e-44b3-a355-f9df98510250)
-
 ![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/99347fd4-018a-44c6-9421-b9d7f8d3324e)
 
 El diagrama de clases
@@ -29,6 +25,12 @@ Nueva estructura segun requerimiento
 
 Vista de diseñador Nueva Base de datos:
 ![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/f0a7a8f1-38be-4823-b4e1-7c90dea392b8)
+
+
+![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/ea8f5335-3dc2-426f-b3a8-d6d3d47e4588)
+
+![image](https://github.com/Galbickus/IntegradorUTNalt/assets/135274833/f400f141-4d3e-44b3-a355-f9df98510250)
+
 
 
 
